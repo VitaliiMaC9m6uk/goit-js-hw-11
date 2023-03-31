@@ -5,8 +5,6 @@ import { renderImages } from "./renderFoto";
 import { updateLoadButton } from './renderFoto';
 import { updateTotal } from './renderFoto';
 import { clearArticles } from './renderFoto';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 const formEl = document.querySelector('#search-form');
 
@@ -44,7 +42,3 @@ document.querySelector('.load-more').addEventListener('click', () => {
 
     fetchImage(search.replace(" ","+"), page);
 });
-
-let gallery = new SimpleLightbox('.gallery a', {
-    
-})

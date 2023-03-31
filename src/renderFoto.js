@@ -1,13 +1,12 @@
 import Notiflix from 'notiflix';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
-const galleryEl=document.querySelector('.gallery__container')
 export function renderImages(images) {
-  console.log(images)
-
-  
-
-    const arrayImages = images.hits;    
-    const markingImages = arrayImages.map(image => `
+  console.log(images)  
+  const galleryEl = document.querySelector('.gallery__container')
+  const arrayImages = images.hits;  
+  const markingImages = arrayImages.map(image => `
     <div class="photo-card gallery__item" >        
         <a href="${image.largeImageURL}"><img class="image" src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
         </a>  
@@ -29,6 +28,10 @@ export function renderImages(images) {
     galleryEl.insertAdjacentHTML('beforeend',markingImages);
  
 };
+
+let gallery = new SimpleLightbox('.gallery__container a', {
+    
+});
 
 export const updateLoadButton = (currentPage,totalHits) => {
   const btn = document.querySelector('.load-more');  
