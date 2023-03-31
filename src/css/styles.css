@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+.gallery__container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.image{
+    width: 450px;
+    max-height: 450px;
+}
+.search-form{
+    background-color: aqua;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:flex;
+    justify-content: center;
+}
+.load-more{
+    background-color: brown;
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    color: aliceblue;
+    display:none;
+    margin-bottom: 100px;
+   
+    cursor: pointer;
+    font-size: 25px;
+    
+}
+.btn__center{
+    display:flex;
+    justify-content: center;    
+}
+.total{
+    margin-left:15px;
+}
