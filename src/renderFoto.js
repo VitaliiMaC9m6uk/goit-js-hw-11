@@ -28,7 +28,6 @@ export function renderImages(images) {
     galleryEl.insertAdjacentHTML('beforeend',markingImages);
  
 };
-
 let gallery = new SimpleLightbox('.gallery__container a', {
     
 });
