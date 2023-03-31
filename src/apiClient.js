@@ -1,14 +1,11 @@
 export const getFoto = async (search,page) => {
           
-    const key = process.env.PIXABAY_API_KEY;
+    const key ='34860459-58caa0f812cc249544584c986';
     const q = search;
     const image_type = "photo";
     const orientation = "horizontal";
     const safesearch = "true";
-    const per__page = 40; 
-    page;
-    // pageSize: 10,
-          
+    const per__page = 40;        
     
     try {
         const response = await fetch(

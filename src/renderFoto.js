@@ -26,11 +26,9 @@ export function renderImages(images) {
         </div>
     </div>`).join("");      
     galleryEl.insertAdjacentHTML('beforeend',markingImages);
- 
+  gallery.refresh()
 };
-let gallery = new SimpleLightbox('.gallery__container a', {
-    
-});
+let gallery = new SimpleLightbox('.gallery__container a');
 
 export const updateLoadButton = (currentPage,totalHits) => {
   const btn = document.querySelector('.load-more');  
