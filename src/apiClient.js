@@ -1,5 +1,3 @@
-const API_KEY = '34860459-58caa0f812cc249544584c986';
-
 export const getFoto = async (search,page) => {
           
     const key = process.env.PIXABAY_API_KEY;
