@@ -11,6 +11,7 @@ const formEl = document.querySelector('#search-form');
 const fetchImage = (search, page) => getFoto(search, page)
     .then(
         response => {
+            console.log(response)
             if (response.totalHits===0) {
                 return Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
             } if (page < 2) {

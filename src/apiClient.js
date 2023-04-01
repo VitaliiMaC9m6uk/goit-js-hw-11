@@ -17,7 +17,7 @@ export const getFoto = async (search, page) => {
         if (!response.status === 200) {
             throw new Error(response.status);
         }        
-        return response;
+        return response.data;
     } 
     catch (error) {
         console.error(error);

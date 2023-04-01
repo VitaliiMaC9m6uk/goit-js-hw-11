@@ -3,8 +3,9 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 export function renderImages(images) {  
+  console.log(images)
   const galleryEl = document.querySelector('.gallery__container')
-  const arrayImages = images.data.hits;  
+  const arrayImages = images.hits;  
   const markingImages = arrayImages.map(image => `
     <div class="photo-card gallery__item" >        
         <a href="${image.largeImageURL}"><img class="image" src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
