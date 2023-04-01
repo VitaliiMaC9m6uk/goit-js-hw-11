@@ -1,4 +1,6 @@
-export const getFoto = async (search,page) => {
+import axios from "axios";
+
+export const getFoto = async (search, page) => {
           
     const key ='34860459-58caa0f812cc249544584c986';
     const q = search;
@@ -8,15 +10,17 @@ export const getFoto = async (search,page) => {
     const per__page = 40;        
     
     try {
-        const response = await fetch(
+        const response = await axios.get(
             `https://pixabay.com/api/?key=${key}&q=${q}&image_type=${image_type}&orientation=
             ${orientation}&safesearch=${safesearch}&per_page=${per__page}&page=${page}`);
-        if (!response.ok) {
+        
+        if (!response.status === 200) {
             throw new Error(response.status);
-        }
-        return await response.json();
-    } catch (e) {
-        console.error(e);
+        }        
+        return response;
+    } 
+    catch (error) {
+        console.error(error);
     }
 
 };
